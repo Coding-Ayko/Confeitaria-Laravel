@@ -1,0 +1,13 @@
+/* footer estilização */
+.footer-bg {
+  background-color: #fff;
+}
+
+.footer {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  gap: 40px;
+}

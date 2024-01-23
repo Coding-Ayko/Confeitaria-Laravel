@@ -1,44 +1,77 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <title>@yield('title')Laravel</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
+        <link rel="stylesheet" href="css\style.css">
+        <script src="js\script.js"></script>
+        <script src="uikit/dist/js/uikit-icons.min.js"></script>
     </head>
-    <body class="antialiased">
-        <h1> Algum título</h1>
-        @if(10 > 5)
-            <p> A condição é verdadeira </p> 
-        @endif
-        <p>{{$nome}}</p>
+    <body>
+    @yield('content')
+    <header>
+    <div class="div-header-img">
+      <a href="./index.php"><img src="/./img/Aykandi.svg" fill="black" alt="Aykandi"></a>
+    </div>
+    <div>
+      <nav>
+        <ul class="">
+          <li><a href="./.php">Página Inicial</a></li>
+          <li><a href="./.php">Meus Favoritos</a></li>
+          <li><a href="./.php">Receitas</a></li>
+          <li><a href="./.php">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="div-header-nav-login">
+      <nav>
+        <ul class="">
+          <li><a href="./.php">Login</a></li>
+          <li><a href="./.php">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </div>
 
-        @if($nome == "Caroline")
-            <p> O nome é Pedro</p>
-        @elseif($nome == "Tatau")
-            <p> O nome é {{$nome}} e ela tem {{$idade}} anos e trabalha como {{$job}}:)</p>
-        @else
-            <p> O nome não é Caroline</p>a
-        @endif
+    </header>
+    <footer>
+    <footer class="footer-bg">
+    <div class="footer container">
+      <div>
+        <a href="./index.html"><img src="/./img/Aykandi.svg" alt="Bikcraft"></a>
+      </div>
 
-        @for($i = 0; $i < count($arr); $i++ )
-            <p>{{$arr[$i]}} - {{$i}}</p>
-            @if($i==2)
-                <p>O $i é = 2</p>
-            @endif
-        @endfor
+      <div class="contato">
+        <h2 class="font-2-l-b cor-0">CONTATO</h2>
+          <ul class="contato-item font-2-m">
+            <li><a href="tel:+551699999999">+55 16 9999-9999</li></a>
+            <li><a href="mailto:contato@bikcraft.com">contato@bikcraft.com</li></a>
+            <li>Rua Ali Perto, 27 - Botafogo</li>
+            <li> Rio de Janeiro - RJ</li>
+          </ul>
+          <ul class="redes font-2-m">
+            <li><img src="./img/redes/instagram.svg" alt="logo instagram"></li>
+            <li><img src="./img/redes/facebook.svg" alt="logo facebook"></li>
+            <li><img src="./img/redes/youtube.svg" alt="logo youtube"></li>
+          </ul>
+      </div>
 
-        @php
-            $name = "tata";
-            echo $name;
-        @endphp
+      <div class="informacoes">
+        <h2 class="font-2-l-b cor-0">INFORMAÇÕES</h2>
+        <nav>
+        <ul class="font-1-m cor-5">
+          <li><a href="./bicicletas.html">Home</a></li>
+          <li><a href="./seguros.html">Quem nós somos?</a></li>
+          <li><a href="./contato.html">Receitas</a></li>
+          <li><a href="./contato.html">Contato</a></li>
+        </ul>
+        </nav>
+      </div>
 
-        {{--comentário no blade--}}
-
-        @foreach($nomes as $nome)
-        <p>{{$loop->index}}</p> {{--váriavel 'global' do Blade (nesse caso mostra o índice do array este loop)--}}
-        <p>{{ $nome }}</p>        
-        @endforeach
+      <p class="direitos font-2-m cor-6">Aykandi. &copy; Todos os direitos reservados. </p>
+    </div>
+  </footer>
+    </footer>
+    
     </body>
 </html>
