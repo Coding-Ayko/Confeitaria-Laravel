@@ -1,1 +1,3 @@
-@import url(./footer.css);
+/* Layouts Base */
+@import url(./layouts/header.css);
+@import url(./layouts/footer.css);
