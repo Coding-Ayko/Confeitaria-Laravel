@@ -1,5 +1,5 @@
 body {
-  background-color: FDFCFC;
+  background-color: white;
     margin: 0px;
   }
 
@@ -27,7 +27,7 @@ body {
 
 .cta span {
   position: relative;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .cta svg {
@@ -35,7 +35,6 @@ body {
   top: 0;
   margin-left: 10px;
   margin-bottom: 5px;
-
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -71,6 +70,10 @@ body {
 
 #login a{
   color: white;
+}
+
+a.cta{
+  font-size: 20px;
 }
 
 ul{
