@@ -1,31 +1,44 @@
 /* footer estilização */
-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  color: #fff;
-  font-size: 18px;
-  background-color: #f8f9fa;
-  align-items: center;
-
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 
-p{
+footer {
+  margin-top: auto;
+  width: 100%;
+  color: #fff !important;
+  font-size: 18px;
+  background-color: #f8f9fa;
+  align-items: center;
   font-family: 'Inter';
-  color: #fff;
+  bottom: 0;
+
+}
+
+footer a{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+
+
+footer p{
+  font-family: 'Inter';
+  color: #000;
   padding: 0px;
   margin: 0px;
-  text-align: center;
   padding-top: 10px;
   font-size: 16px;
   font-weight: 300;
 }
 
-a,
 span{
   font-family: 'Inter';
-  color: #fff;
+  color: #fff !important;
   font-size: 16px;
   font-weight: 660;
 
