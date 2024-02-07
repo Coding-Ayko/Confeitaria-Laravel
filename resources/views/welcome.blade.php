@@ -2,37 +2,56 @@
 @section('title','Teste')
 @section('content')
 
-<h1>Teste de Layout e section</h1>
-  <h1> Algum título</h1>
-  @if(10 > 5)
-      <p> A condição é verdadeira </p> 
-  @endif
-  <p>{{$nome}}</p>
+<body>
+    <div class="home-content">
+        <div class="header-home-text">
+            <img class="sparkle" src="\.\img\Sparkle.svg" alt="">
+            <p class="subtitulo-blog">Pratos Saudáveis e Deliciosos!</p>
+            <h1>Blog de Receitas <br> Gourmet</h1> 
+            <div id="divBusca">
+                <input type="text" id="f" placeholder="Busque por uma receita!"/>
+                <button id="btnBusca" >Buscar</button>
+            </div>
+        </div>
+        <img class="cupcake" src="\.\img\Group 1000002256.svg" alt="">
+        <div class="redes-sociais">
+            <a href="#"><img src="\.\img\Facebook.png" alt=""></a>
+            <a href="#"><img src="\.\img\insta.png" alt=""></a>
+            <a href="#"><img src="\.\img\X.png" alt=""></a>
+        </div>
+    </div>
+    <div class="novidades-semana-content">
+        <h1>Novidades da Semana</h1>
+        <div class="novidades-rollside">
+            <div class="nov-rollside-1">
+                <img id="img-nov-rollside" src="" alt="">
+                <h1>Lumpia with Suace</h1>
+                <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor </p>
+                <img id="rating-nov-rollside"  src="" alt="">
+            </div>
 
-  @if($nome == "Caroline")
-      <p> O nome é Pedro</p>
-  @elseif($nome == "Tatau")
-      <p> O nome é {{$nome}} e ela tem {{$idade}} anos e trabalha como {{$job}}:)</p>
-  @else
-      <p> O nome não é Caroline</p>
-  @endif
+            <div class="nov-rollside-2">
+                <img id="img-nov-rollside" src="" alt="">
+                <h1>Lumpia with Suace</h1>
+                <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor </p>
+                <img id="rating-nov-rollside"  src="" alt="">
+            </div>
 
-  @for($i = 0; $i < count($arr); $i++ )
-      <p>{{$arr[$i]}} - {{$i}}</p>
-      @if($i==2)
-          <p>O $i é = 2</p>
-      @endif
-  @endfor
+            <div class="nov-rollside-3">
+                <img id="img-nov-rollside" src="" alt="">
+                <h1>Lumpia with Suace</h1>
+                <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor </p>
+                <img id="rating-nov-rollside"  src="" alt="">
+            </div>
 
-  @php
-      $name = "tata";
-      echo $name;
-  @endphp
+            <div class="nov-rollside-4">
+                <img id="img-nov-rollside" src="" alt="">
+                <h1>Lumpia with Suace</h1> <!-- aqui vem dados em php dinâmizados -->
+                <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor </p> <!-- aqui vem dados em php dinâmizados -->
+                <img id="rating-nov-rollside"  src="" alt="">
+            </div>
+        </div>
+    </div>
 
-  {{--comentário no blade--}}
-
-  @foreach($nomes as $nome)
-  <p>{{$loop->index}}</p> {{--váriavel 'global' do Blade (nesse caso mostra o índice do array este loop)--}}
-  <p>{{ $nome }}</p>        
-  @endforeach
+</body>
 @endsection

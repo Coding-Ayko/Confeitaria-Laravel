@@ -1,3 +1,7 @@
 /* Layouts Base */
 @import url(./layouts/header.css);
 @import url(./layouts/footer.css);
+
+
+/* Estilos Page Home */
+@import url(./home/home.css);

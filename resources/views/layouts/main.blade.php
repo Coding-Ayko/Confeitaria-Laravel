@@ -59,7 +59,6 @@
     </div>
     
 </header>
-<hr>
 @yield('content')
 <footer class=" footer-bg">
   <div  class="footer-content">
