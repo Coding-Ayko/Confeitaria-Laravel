@@ -3,25 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Receita;
 
 class HomeController extends Controller
 {
     public function index() {
         
-        $nome = "Tatau";
-        $idade = 19;
-        $arr = [1,2,3,4,5];
-        $nomes = ['Aline', 'Bárbara', 'Collins', 'Rebecca', 'Regina'];
+        $receitas = Receita::all();
         
-        return view('welcome', 
-        [
-            'nome'=>$nome, 
-            'idade'=>$idade , 
-            'job'=>"estagiária de TI",
-            'arr' => $arr,
-            'nomes' => $nomes
-            ]
-        );
+        return view('welcome',['receitas' => $receitas]);
     }
 
 }

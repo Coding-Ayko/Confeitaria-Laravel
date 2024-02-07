@@ -116,7 +116,7 @@ textarea:focus, input#f:focus, select:focus {
 
 .novidades-semana-content{
   background-color:rgba(246, 160, 181, 0.30);
-  background-image:url(../../img/background-pink.png );
+  background-image:url(../../img/background-pink.png ) no-repeat; 
   width: 100vw ;
   height: 100vh;
   align-items: center;
