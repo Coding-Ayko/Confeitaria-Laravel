@@ -12,6 +12,7 @@ class HomeController extends Controller
         $receitas = Receita::all();
         
         return view('welcome',['receitas' => $receitas]);
+        
     }
 
 }

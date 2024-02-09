@@ -27,52 +27,28 @@
 
     <div class="novidades-semana-content">
         <h1>Novidades da Semana</h1>
+
         <div class="novidades-rollside">
             @foreach($receitas as $receita)
-                <h1>{{$receita->title }}</h1>
-                <p>{{$receita->description}}</p>
+            <div class="">
+                <div class="card-group">
+                    <div class=" card-col-md-3">
+                        <div class="card-body">
+                            <img src="{{("/./img/" . $receita->id .".png"  )}}" alt="">
+                            <h4 class="card-title">{{$receita->title }}</h4>
+                            <p class="card-text">{{$receita->description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
             @endforeach
-
-            
-
-
-            <!-- <div class="nov-rollside-1">
-                <img id="img-nov-rollside" src="" alt="">
-                @foreach($receitas as $receita)
-                <h1>{{$receita->title }}</h1>
-                <p>{{ $receita->description }}</p>
-                @endforeach
-                <img id="rating-nov-rollside"  src="" alt="">
-            </div>
-
-            <div class="nov-rollside-2">
-                <img id="img-nov-rollside" src="" alt="">
-                @foreach($receitas as $receita)
-                <h1>{{$receita->title }}</h1>
-                <p>{{ $receita->description }}</p>
-                @endforeach
-                <img id="rating-nov-rollside"  src="" alt="">
-            </div>
-
-            <div class="nov-rollside-3">
-                <img id="img-nov-rollside" src="" alt="">
-                @foreach($receitas as $receita)
-                <h1>{{$receita->title }}</h1>
-                <p>{{ $receita->description }}</p>
-                @endforeach
-                <img id="rating-nov-rollside"  src="" alt="">
-            </div>
-
-            <div class="nov-rollside-4">
-                <img id="img-nov-rollside" src="" alt="">
-                @foreach($receitas as $receita)
-                <h1>{{$receita->title }}</h1>
-                <p>{{ $receita->description }}</p>
-                @endforeach
-                <img id="rating-nov-rollside"  src="" alt="">
-            </div> -->
         </div>
+        <button type="search" class="btn btn-primary">Buscar</button>
+
+
+
     </div>
+    
 
 </body>
 @endsection
