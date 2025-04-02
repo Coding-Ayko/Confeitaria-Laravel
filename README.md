@@ -41,7 +41,7 @@ Este projeto é um site de confeitaria desenvolvido utilizando Laravel e arquite
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/confeitaria-laravel.git
+   git clone https://github.com/Coding-Ayko/Confeitaria-Laravel.git
    ```
 2. Acesse o diretório do projeto:
    ```bash
