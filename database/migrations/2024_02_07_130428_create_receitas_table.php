@@ -18,11 +18,11 @@ return new class extends Migration
             $table->text("description");
             $table->string("category");
             $table->integer("rating");
-            $table->boolean("private");
+            $table->boolean("private"); 
 
         });
     }
-
+ 
     /**
      * Reverse the migrations.
      */
