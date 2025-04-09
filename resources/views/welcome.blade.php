@@ -25,16 +25,16 @@
     </div>
 
 
-    <div class="novidades-semana-content">
-        <h1>Novidades da Semana</h1>
+    <!-- <div class="novidades-semana-content"> -->
+        <!-- <h1>Novidades da Semana</h1> -->
 
-        <div class="novidades-rollside">
+        <!-- <div class="novidades-rollside">
             @foreach($receitas as $receita)
             <div class="">
                 <div class="card-group">
                     <div class=" card-col-md-3">
                         <div class="card-body">
-                            <img src="{{("/./img/" . $receita->id .".png"  )}}" alt="">
+                            <img src="{{ asset('./img/novidades-semana/' . $receita->id . '.png') }}" alt="">
                             <h4 class="card-title">{{$receita->title }}</h4>
                             <p class="card-text">{{$receita->description}}</p>
                         </div>
@@ -42,12 +42,29 @@
                 </div>
             </div>   
             @endforeach
+        </div> -->
+        <!-- <button type="search" class="btn btn-primary">Buscar</button> -->
+
+        <div class="novidades-semana-content">
+            <h1>Novidades da Semana</h1>
+            <div class="card-group">
+                @foreach($receitas as $receita)
+                <div class=" card-col-md-3">
+                        <div class="card">
+                            <img src="{{ asset('./img/novidades-semana/' . $receita->id . '.png') }}" alt="">
+                            <h4 class="card-title">{{$receita->title }}</h4>
+                            <p class="card-text">{{$receita->description}}</p>
+                        </div>
+                             {{-- Estrelinhas com imagem --}}
+                             <div class="rating-img">
+                                <img src="{{ asset('./img/rating.png') }}" alt="Rating" class="estrelas">
+                            </div>
+                    </div>
+                @endforeach
+            </div>
         </div>
-        <button type="search" class="btn btn-primary">Buscar</button>
 
-
-
-    </div>
+    <!-- </div> -->
     
 
 </body>
