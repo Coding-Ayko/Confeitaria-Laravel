@@ -1,0 +1,17 @@
+# Use root/example as user/password credentials
+version: '2.0'
+
+services:
+
+  mysql-db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: oNMKfafpL0Mh
+    ports: 
+    - '3326:3306'
+    volumes:
+    - 'C:/Users/tauane.carolina/Documents/GitHub/Docker/Containers/Aykandi:/var/lib/mysql'
+    # (this is just an example, not intended to be a production configuration)
+
+
