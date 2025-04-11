@@ -3,11 +3,14 @@
   position: relative;
   display: flex;
   width: 100%;
+  justify-content: center !important; 
+  /* max-width:max-content; */
   height: 90vh;
   gap: 200px;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .header-home-text {
@@ -193,7 +196,7 @@ select:focus {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 60px 80px;
+  padding: 60px 250px;
   overflow: hidden;
 }
 
@@ -265,6 +268,83 @@ select:focus {
   cursor: pointer;
   background: linear-gradient(181deg, rgba(124, 46, 4, 0.9) 39.17%, rgba(105, 40, 4, 0.9) 99.15%);
 }
+
+/* ========================== BAKERY SECTION  ============================= */
+.session-bakery {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.session-bakery::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('/img/bakery/background-dourado.png');
+  background-size: 500px 280px; /* tamanho do padrão hihi hihi  */
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.session-bakery > * {
+  position: relative;
+  z-index: 1;
+}
+
+img.pao {
+  max-width: 50% !important;
+}
+
+.bakery-title h1 {
+  font-family: 'Arsernica Trial';
+  font-weight: bold;
+  font-size: 430px;
+  text-align: center;
+  background: radial-gradient(circle at center, #B05728 0%, #EDBD5B 73%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  opacity:0.30 ;
+}
+
+
+.layout-bakery {
+  display: flex;
+  align-items: center; /* centraliza os filhos no eixo Y */
+}
+
+.layout-right-bakery{
+  max-width: 30%;
+  text-align: left;
+}
+
+.description-bakery{
+  color: #865718;
+}
+
+
+#btnBakery {
+  color: aliceblue;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(181deg, #EDBD5B 24%, #C47E20 99%);
+  box-shadow: 0px 4px 4px #712E03, 
+              0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 5px 20px;
+  transition: background 0.3s ease;
+}
+
+
+
+
+
 
 
 
