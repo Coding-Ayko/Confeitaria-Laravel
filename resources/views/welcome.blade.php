@@ -60,6 +60,20 @@
             <img src="./img/receita-brownie/image-3-brownies.png" alt="">
         </div>
     </div>
-</body>
+    
+    <div class="session-bakery">
+        <div class="bakery-title">
+            <h1>Bakery</h1>
+        </div>
+        <div class="layout-bakery">
+            <img class="pao" src="./img/bakery/paes-under-table.png" alt="">
+            <div class="layout-right-bakery">
+                <p class="description-bakery"> <strong>Pães Artesanais Fresquinhos Toda Manhã</strong> <br>Nada como o aroma de pão quentinho saindo do forno para começar bem o dia! Todas as manhãs, nossa padaria prepara pães artesanais com ingredientes selecionados, fermentação natural e aquele cuidado especial que dá gosto em cada mordida. Do clássico francês ao integral recheado, nossas fornadas trazem variedade, crocância por fora e maciez por dentro. Perfeitos para acompanhar um café, um chá ou até aquele brunch especial de domingo. Venha descobrir seu favorito!</p>
+                <button id="btnBakery">Confira a variedade! </button>
+            </div>
+        </div>
+        <img src="./img/bakery/table.png" alt="">
+    </div>
 
+</body>
 @endsection
