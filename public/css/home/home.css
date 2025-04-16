@@ -317,7 +317,7 @@ img.pao {
 
 .layout-bakery {
   display: flex;
-  align-items: center; /* centraliza os filhos no eixo Y */
+  align-items: center; 
 }
 
 .layout-right-bakery{
