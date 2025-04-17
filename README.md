@@ -26,7 +26,6 @@ Este projeto é um site de confeitaria desenvolvido utilizando Laravel e arquite
 ## Tecnologias Utilizadas
 
 - **Laravel** - Framework PHP para desenvolvimento web.
-- **Bootstrap** - Biblioteca CSS para estilização responsiva.
 - **MVC (Model-View-Controller)** - Arquitetura utilizada no projeto.
 - **MySQL** - Banco de dados para armazenar informações do sistema.
 
