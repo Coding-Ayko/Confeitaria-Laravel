@@ -42,4 +42,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    
+    public function favourites(){
+        return $this->hasMany(Favourites::class);
+    } // this means that a user can have many favourites
+
+    public function favouriteRecipes(){
+        return $this->belongsToMany(Recipe::class, 'favourites');
+    } // this means that a user can have many favourite recipes through the 'favourites' pivot table
 }
+

@@ -9,11 +9,8 @@ class HomeController extends Controller
 {
     public function index() {
         $recipes = Recipe::all();
-        
-        
         return view('welcome',['recipes' => $recipes]);
-    
-        
     }
 
 }
+
