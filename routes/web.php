@@ -10,8 +10,8 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
 
 // Rotas usando action  favs- Favoritos Controller
-use App\Http\Controllers\FavoritosController;
-Route::get('/favoritos', [FavoritosController::class, 'favs']);
+use App\Http\Controllers\FavouritesController;
+Route::get('/favourites', [FavouritesController::class, 'favs']);
 
 // Rotas usando action  artg- Artigos Controller
 use App\Http\Controllers\ArticleController;
