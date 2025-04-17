@@ -8,6 +8,7 @@ Route::get('/news', [NewsController::class, 'news']);
 // Rotas usando action index- Home Controller
 use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/search', [HomeController::class, 'searchRecipe'])->name('search.recipe');
 
 // Rotas usando action  favs- Favoritos Controller
 use App\Http\Controllers\FavouritesController;

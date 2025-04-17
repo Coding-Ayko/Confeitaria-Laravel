@@ -12,5 +12,13 @@ class HomeController extends Controller
         return view('welcome',['recipes' => $recipes]);
     }
 
+
+    public function searchRecipe(Request $request){
+        $query = $request->input('q'); // get the value from input
+        $recipes = Recipe::where('name', 'like', '%' . $query . '%')->get(); // search how to do it wihout sql injetion 
+        return view('welcome', ['recipes' => $recipes]);
+    }
+
+
 }
 
