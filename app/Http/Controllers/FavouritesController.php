@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FavoritosController extends Controller
+class FavouritesController extends Controller
 {
     public function favs(){
-        return view('/favoritos');
+        return view('/favourites');
     }
 }
