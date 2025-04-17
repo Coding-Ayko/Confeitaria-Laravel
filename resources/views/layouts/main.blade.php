@@ -38,7 +38,7 @@
           </li>
           <li><a href="/favoritos">FAVORITOS</a></li>
           <li><a href="/articles">ARTIGOS</a></li>
-          <li><a href="/contato">CONTATO</a></li>
+          <li><a href="/contact">CONTATO</a></li>
         </ul>
       </nav>
     </div>

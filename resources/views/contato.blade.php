@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title','contato')
+@section('title','contact')
 @section('content')
 
 <h1>Teste página de Contato</h1>
