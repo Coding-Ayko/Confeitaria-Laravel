@@ -8,7 +8,7 @@
             <img class="sparkle" src="\.\img\Sparkle.svg" alt="">
             <p class="subtitulo-blog">Pratos Saudáveis e Deliciosos!</p>
             <h1>Blog de Receitas <br> Gourmet</h1> 
-            <form action=" {{  route('recipes.search') }}" method="get">
+            <form action=" {{  route('search.recipe') }}" method="get">
                 <div id="divBusca">
                     <input type="text" id="q" placeholder="Busque por uma receita!"/>
                     <button type="submit" id="btnBusca">Buscar</button>
