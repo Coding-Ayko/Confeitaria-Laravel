@@ -17,12 +17,9 @@ Route::get('/favoritos', [FavoritosController::class, 'favs']);
 use App\Http\Controllers\ArticleController;
 Route::get('/articles', [ArticleController::class, 'artg']);
 
-// Rotas usando action  contato - Contato Controller
-use App\Http\Controllers\ContatoController;
-Route::get('/contato', [ContatoController::class, 'contato']);
-
-
-
+// Rotas usando action  contato - Contact Controller
+use App\Http\Controllers\ContactController;
+Route::get('/contact', [ContactController::class, 'contact']);
 
 
 // Rotas usando action - Recipe Controller
