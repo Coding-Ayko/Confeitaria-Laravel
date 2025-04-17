@@ -27,7 +27,7 @@
           <li><a href="/">HOME</a></li>
           <li><a href="/news">NEWS</a></li>
           <li class="dropdown">
-            <a href="/receitas/teste" class="dropbtn">RECEITAS</a>
+            <a href="/recipes/teste" class="dropbtn">RECEITAS</a>
             <div class="dropdown-content">
               <a href="#">Criar</a>
               <a href="#">Entradas</a>
@@ -37,7 +37,7 @@
             </div>
           </li>
           <li><a href="/favoritos">FAVORITOS</a></li>
-          <li><a href="/artigos">ARTIGOS</a></li>
+          <li><a href="/articles">ARTIGOS</a></li>
           <li><a href="/contato">CONTATO</a></li>
         </ul>
       </nav>
