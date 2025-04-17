@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Receitas')
+@section('title', 'recipes')
 @section('content')
 
 @if($id ?? null)

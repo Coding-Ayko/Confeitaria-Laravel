@@ -8,9 +8,9 @@ class RecipeController extends Controller
 {
 
     
-    public function receitas($id = null){
+    public function recipes($id = null){
  
-         return view ('receitas', 
+         return view ('recipes', 
          [
              'id' =>$id
          ]);

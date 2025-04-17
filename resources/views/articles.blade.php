@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Artigos')
+@section('title', 'Article')
 @section('content')
 
 <p>artigo</p>

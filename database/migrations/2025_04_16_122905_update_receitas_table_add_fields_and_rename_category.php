@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('receitas', function (Blueprint $table) {
+        Schema::table('recipes', function (Blueprint $table) {
             // Need to add the following fields:
             $table->text("ingredients");
             $table->text("prepare_mode");
@@ -30,7 +30,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('receitas', function (Blueprint $table) {
+        Schema::table('recipes', function (Blueprint $table) {
             // Revert changes
             $table->dropColumn("ingredients", "prepare_mode", "time", "rendiment", "chefs_favourite");
             $table->renameColumn("id_category","category");

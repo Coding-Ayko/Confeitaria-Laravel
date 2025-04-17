@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Receita;
+use App\Models\Recipe;
 
 class HomeController extends Controller
 {
     public function index() {
-        $receitas = Receita::all();
+        $recipes = Recipe::all();
         
         
-        return view('welcome',['receitas' => $receitas]);
+        return view('welcome',['recipes' => $recipes]);
     
         
     }
