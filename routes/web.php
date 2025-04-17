@@ -25,7 +25,6 @@ Route::get('/contact', [ContactController::class, 'contact']);
 // Rotas usando action - Recipe Controller
 use App\Http\Controllers\RecipeController;
 Route::get('/recipes/create', [RecipeController::class, 'create']);
-Route::get('/contact', [RecipeController::class, 'contact']);
 Route::get('/recipes/{id}', [RecipeController::class, 'recipes']);
 
 
