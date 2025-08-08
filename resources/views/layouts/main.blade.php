@@ -15,6 +15,7 @@
         <script src="js\script.js"></script>
         <script src="uikit/dist/js/uikit-icons.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+        {{-- <link rel="stylesheet" href="{{ asset('css/cadastre_se.css') }}"> --}}
     </head>
     <body>
     <header>

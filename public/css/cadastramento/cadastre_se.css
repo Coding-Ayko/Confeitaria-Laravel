@@ -1,0 +1,70 @@
+.cadastre-content {
+    opacity: 0;
+    letter-spacing: 0.05rem;
+    will-change: transform;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ffc5e7;
+    padding: 50px;
+    box-shadow: 0px 4px 4px rgba(121, 2, 2, 0.363);
+}
+
+.cadastre-content * {
+    will-change: transform;
+}
+
+.cadastre-content h1 {
+    text-align: center;
+    color: #d6336c;
+    font-family: 'David Libre', serif;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.cadastre-content p {
+    text-align: center;
+    font-family: ''Times New Roman', Times, serif';
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cadastre-user {
+    background-color: #fdeff7;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.cadastre-form {
+    display: flex;
+    gap: 8px; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    padding: 10px;
+    margin-top: 7px;
+    border: none;
+    outline: none; /* retira a borda ao clicar no input */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    border-radius: 5px;
+}
+
+input[type='submit'] {
+    background-color: #c96487;
+    color: white;
+    font-family: 'David Libre', serif;
+    font-size: 1.3rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background-color: #9e4d69;
+}
+
