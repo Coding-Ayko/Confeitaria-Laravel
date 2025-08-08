@@ -326,23 +326,13 @@ img.pao {
 }
 
 .description-bakery{
+  font-size: 1.5rem;
   color: #865718;
 }
 
-
 #btnBakery {
-  color: aliceblue;
-  border: none;
-  border-radius: 5px;
-  background: linear-gradient(181deg, #EDBD5B 24%, #C47E20 99%);
-  box-shadow: 0px 4px 4px #712E03, 
-              0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 5px 20px;
-  transition: background 0.3s ease;
+  color: white
 }
-
-
-
 
 
 

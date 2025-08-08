@@ -55,7 +55,7 @@
                 </svg> 
             </a>
         </li>
-          <li><a style=" font-size: 20px !important;" href="./.php">Cadastre-se</a></li>
+          <li><a style=" font-size: 20px !important;" href="{{route('cadastre')}}">Cadastre-se</a></li>
         </ul>
       </nav>
     </div>
