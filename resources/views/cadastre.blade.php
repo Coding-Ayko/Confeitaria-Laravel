@@ -1,6 +1,6 @@
 <head>
     <link rel="stylesheet" href="{{ asset('css/cadastramento/cadastre_se.css') }}">
-     <script src="{{ asset('js/gsap/gsap.min.js') }}"></script>
+    <script src="{{ asset('js/gsap/gsap.min.js') }}"></script>
 </head>
 
 @extends('layouts.main')
@@ -10,21 +10,47 @@
         <h1>CADASTRE-SE AQUI</h1>
         <p>Cadastre-se para receber nossas novidades e ofertas exclusivas!</p>
         <div class="cadastre-user">
-            <form class="cadastre-form">
-                <input type="text" placeholder="Nome Completo" required>
+            <form action="{{route('cadastre.submit')}}" class="cadastre-form" method="POST">
+                @csrf
+                {{-- serve para incluir automaticamente um token de segurança chamado CSRF token --}}
+
+                <input type="text" name='nome' placeholder="Nome Completo" required>
                 <br>
-                <input type="email" placeholder="E-mail" required>
+                <input type="email" name='email' placeholder="E-mail" required>
                 <br>
-                <input type="password" placeholder="Senha" required>
+                <input type="password" name='password' placeholder="Senha" required>
                 <br>
-                <input type="submit" value="Cadastrar"></button>
-            </div>
-        </section>
+                <input type="submit" name='submit' value="Cadastrar"></button>
+        </div>
+    </section>
 @endsection {{-- Precisa fechar a section para que ele funcione corretamente --}}
 
-<script>
+{{-- <script>
     gsap.registerPlugin(SplitText);
     console.clear();
+    document.fonts.ready.then() => {
+        gsap.set(".cadastre-content", {
+            opacity: 1
+        });
 
-    document.fonts.ready.then
-</script>
+        let split = SplitText.create(".cadastre-content", {
+            type: "chars, words",
+            mask: "chars"
+        });
+
+        let tween = fsap.from(split.chars, {
+            duration: 0.6,
+            yPercent: "random([-150, 150])",
+            xPercent: "random([-150, 150])",
+            stagger: {
+                from: "random",
+                amount: 0.6,
+            },
+            ease: "power3.out"
+        });
+
+        document.querySelector("button").addEventListener("click", (e) => {
+            tween.timeScale(0.5).play(0);
+        });
+    };
+</script> --}}

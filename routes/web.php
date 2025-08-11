@@ -30,7 +30,8 @@ Route::get('/recipes/{id}', [RecipeController::class, 'recipes']);
 
 // Rotas usando actions - Cadastre-se Controller
 use App\Http\Controllers\CadastreSeController;
-Route::get('/cadastre', [CadastreSeController::class, 'cadastreSe'])-> name('cadastre');
+Route::post('/cadastre', [CadastreSeController::class, 'cadastreSe'])-> name('cadastre.submit');
+
 
 // Rotas usando action - Login Controller
 // use App\Http\Controllers\LoginController;

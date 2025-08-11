@@ -6,8 +6,15 @@ use Illuminate\Http\Request;
 
 class CadastreSeController extends Controller
 {
-    public function cadastreSe()
+    public function cadastreSe(Request $request)
     {
-        return view('cadastre');
+        $nome = $request->input('nome');
+        $email = $request->input('email');
+        $senha = $request->input('senha');
+
+        
+        // return view('cadastre');
+        return "Nome: $nome, Email: $email, Senha: $senha";
+        // dd('return'); 
     }
 }

@@ -1,7 +1,7 @@
 .cadastre-content {
-    opacity: 0;
+    /* opacity: 0;
     letter-spacing: 0.05rem;
-    will-change: transform;
+    will-change: transform; */
     margin: auto;
     display: flex;
     flex-direction: column;
