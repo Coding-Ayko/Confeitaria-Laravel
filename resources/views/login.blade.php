@@ -7,6 +7,17 @@
 @section('title', 'Cadastre-se')
 @section('content')
 
-    
+    <section class="form-content">
+        <div class="form">
+            <form action="{{ route('login.store') }}" method="POST">
+                @csrf
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <input type="submit" value="Acessar">
+            </form>
+
+        </div>
+    </section>
+
 
 @endsection

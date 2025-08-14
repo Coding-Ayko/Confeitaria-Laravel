@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CadastroUser;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -37,6 +39,23 @@ class LoginController extends Controller
 
          //return json('teste criado com sucesso')/; 
 
+         $request->validate([
+            'email' => 'required|email',
+            'senha' => 'required'
+         ]);
+
+        //Busca usuário pelo email
+        $user = CadastroUser::where('email', $request->email)->first();
+
+        // Verifica se usuário existe e senha confere
+        if ($user && Hash::check($request->senha,$user->senha)) {
+            // Salva dados do usuário na sessão
+            session(['user_id' => $user->id, 'user_name' => $user->name]);
+
+            return redirect()->route('main2'); //ou para a página inicial após o login
+        }
+
+        return back()->withErrors(['email' => 'email ou senha inválidos']);
     }
 
     /**
@@ -70,4 +89,11 @@ class LoginController extends Controller
     {
         
     }
+
+    public function logout()
+{
+    session()->flush();
+    return redirect()->route('login');
+}
+
 }

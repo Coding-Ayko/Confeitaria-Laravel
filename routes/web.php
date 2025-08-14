@@ -47,7 +47,11 @@ Route::get('/cadastros/{id}', [CadastreSeController::class, 'showCadastro'])->na
 
 use App\Http\Controllers\LoginController;
 
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/login', [LoginController::class, 'index'])->name('login');      // mostra formulário
+Route::post('/login', [LoginController::class, 'store'])->name('login.store'); // processa login
+Route::get('/main2', function() { return view('layouts.main2'); })->name('main2'); // página após login
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout'); // logout
+
 
 
 

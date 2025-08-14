@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use App\Models\CadastroUser;
 use Illuminate\Http\Request;
@@ -31,7 +32,7 @@ class CadastreSeController extends Controller
         $user = new CadastroUser();
         $user->nome = $request->nome;
         $user->email = $request->email;
-        $user->senha = $request->senha; // criptografia segura
+        $user->senha = Hash::make($request->senha); // criptografia segura
         $user->save();
 
         return redirect()->route('resources.views.layouts.main')
