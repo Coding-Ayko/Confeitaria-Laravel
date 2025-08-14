@@ -1,116 +1,117 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <title>@yield('title')</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="\css\style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Outfit:wght@300&family=Quicksand:wght@500&family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Merriweather:ital,wght@1,900&family=Miniver&family=Outfit:wght@300&family=Quicksand:wght@500&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet"> 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="js\script.js"></script>
-        <script src="uikit/dist/js/uikit-icons.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
-        {{-- <link rel="stylesheet" href="{{ asset('css/cadastre_se.css') }}"> --}}
-    </head>
+@extends('layouts.main')
+@section('title', 'Blog Aykandi')
+@section('content')
+
     <body>
-    <header>
-    <div class="div-header-img">
-      <a href="./index.php"><img style=" width: 218px; height: 32px; color:blue;" src="/./img/AykandiHeader.svg" alt="Aykandi"></a>
-    </div>
-    <div>
-      <nav>
-        <ul class="menu-nav">
-          <li><a href="/">HOME</a></li>
-          <li><a href="/news">NEWS</a></li>
-          <li class="dropdown">
-            <a href="/recipes/teste" class="dropbtn">RECEITAS</a>
-            <div class="dropdown-content">
-              <a href="#">Criar</a>
-              <a href="#">Entradas</a>
-              <a href="#">Pratos Principais</a>
-              <a href="#">Acompanhamentos</a>
-              <a href="#">Sobremesas</a>
+
+        @if (session('user_id'))
+            <span>Olá, {{ session('user_name') }}</span>
+            <a href="{{ route('logout') }}">Sair</a>
+        @endif
+
+
+        <div class="home-content">
+            <div class="header-home-text">
+                <img class="sparkle" src="\.\img\Sparkle.svg" alt="">
+                <p class="subtitulo-blog">Pratos Saudáveis e Deliciosos!</p>
+                <h1>Blog de Receitas <br> Gourmet</h1>
+                <form action=" {{ route('search.recipe') }}" method="get">
+                    <div id="divBusca">
+                        <input type="text" id="q" placeholder="Busque por uma receita!" />
+                        <button type="submit" id="btnBusca">Buscar</button>
+                    </div>
+                </form>
             </div>
-          </li>
-          <li><a href="/favourites">FAVORITOS</a></li>
-          <li><a href="/articles">ARTIGOS</a></li>
-          <li><a href="/contact">CONTATO</a></li>
-        </ul>
-      </nav>
-    </div>
 
-    <div class="header-acesso">
-      <nav>
-        <ul class="login">
-          <li id="login">
-            <a  class="cta" href="{{route('login')}}"> Login
-                <svg width="20px" height="10px" viewBox="0 0 13 10">
-                    <path d="M1,5 L11,5"></path>
-                    <polyline points="8 1 12 5 8 9"></polyline>
-                </svg> 
-            </a>
-        </li>
-        <li><a style=" font-size: 20px !important;" href="{{route('cadastre')}}">Cadastre-se</a></li>
-    </ul>
-</nav>
-</div>
+            <img class="cupcake" src="\.\img\Group 1000002256.svg" alt="">
 
-</header>
-
-@if(session('user_id'))
-    <span>Olá, {{session('nome')}}</span>
-    <a href="{{route('logout')}}">Sair</a>
-@endif
-@yield('content')
-<footer class=" footer-bg">
-  <div  class="footer-content">
-    <div class="img-footer">
-      <a href="./index.html"><img style=" width: 218px; height: 32px;"  src="/./img/Aykandi.svg" alt="Bikcraft"></a>
-    </div>
-    <div class="nav-footer">
-      <nav>
-        <ul>
-          <li><a href="./.html">HOME</a></li>
-          <li>|</li>
-          <li><a href="./.html">NEWS</a></li>
-          <li>|</li>
-          <li><a href="./.html">RECEITAS</a></li>
-          <li>|</li>
-          <li><a href="./.html">ARTIGOS</a></li>
-          <li>|</li>
-          <li><a href="./.html">SOBRE</a></li>
-          <li>|</li>
-          <li><a href="./.html">CONTATO</a></li>
-        </ul>
-    </nav>
-</div>
-        <div class="email-contato">
-            <input class="c-checkbox" type="checkbox" id="checkbox">
-          <div class="c-formContainer">
-              <form class="c-form" action="">
-                  <input class="c-form__input" placeholder="E-mail" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
-                  <label class="c-form__buttonLabel" for="checkbox">
-                      <button class="c-form__button" type="button">Enviar</button>
-                    </label>
-              <label class="c-form__toggle" for="checkbox" data-title="Entrar em contato">
-            </label>
-              </form>
+            <div class="redes-sociais">
+                <a href="#"><img src="\.\img\Facebook.png" alt=""></a>
+                <a href="#"><img src="\.\img\insta.png" alt=""></a>
+                <a href="#"><img src="\.\img\X.png" alt=""></a>
             </div>
-          </div>
         </div>
-        
-        <p style="color: white; text-align: center;">&copy; 2024 | Todos os direitos reservados.</p>
-    </footer>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  </body>
-</html>
 
+        <div class="novidades-semana-content">
+            <h1>Novidades da Semana</h1>
+            <div class="card-group">
+                {{-- @foreach ($recipes as $recipe)
+                    <div class="card-col-md-3">
+                        <div class="card">
+                            <img src="{{ asset('./img/novidades-semana/' . $recipe->id . '.png') }}" alt="">
+                            <h4 class="card-title">{{ $recipe->title }}</h4>
+                            <p class="card-text">{{ $recipe->description }}</p>
+                        </div>
+                        <div class="rating-img">
+                            <img src="{{ asset('./img/rating.png') }}" alt="Rating" class="estrelas">
+                        </div>
+                    </div>
+                @endforeach --}}
+            </div>
+            <button id="btnNovidades">Fique por dentro das news!</button>
+        </div>
 
+        <div class="sessao-brownie">
+            <img class="trigo-fundo" src="./img/receita-brownie/trigo-grande-fundo.png" alt="">
+            <img class="trigo-destaque" src="./img/receita-brownie/trigo-pequeno-destacado.png" alt="">
 
+            <div class="header-brownie-text">
+                <p class="subtitulo-brownie">Queridinho dos chefes da casa!</p>
+                <img class="brilhinhos" src="./img/receita-brownie/estrelas-douradas.png" alt="">
+                <h1>Receita<br> Brownie Avelã</h1>
+                <p>O Brownie é um doce comumente consumido, e combinado com nossa receita especial fica ainda mais
+                    desejável! Brownie contém em sua massa, selecionados grãos de avelã e nozes, sortidos em um creme de
+                    chocolate belga, dando um sabor excepcional. As nozes por cima agregam tanto no visual, quando no sabor
+                    crocante ao saboreálo. </p>
 
+            </div>
+
+            <div class="brownie-imgs">
+                <img src="./img/receita-brownie/image-3-brownies.png" alt="">
+            </div>
+        </div>
+
+        <div class="session-bakery">
+            <div class="bakery-title">
+                <h1 id="bola">Bakery</h1>
+            </div>
+            <div class="layout-bakery">
+                <img class="pao" src="./img/bakery/paes-under-table.png" alt="">
+                <div class="layout-right-bakery">
+                    <p class="description-bakery"> <strong>Pães Artesanais Fresquinhos Toda Manhã</strong> <br>Nada como o
+                        aroma de pão quentinho saindo do forno para começar bem o dia! Todas as manhãs, nossa padaria
+                        prepara pães artesanais com ingredientes selecionados, fermentação natural e aquele cuidado especial
+                        que dá gosto em cada mordida. Do clássico francês ao integral recheado, nossas fornadas trazem
+                        variedade, crocância por fora e maciez por dentro. Perfeitos para acompanhar um café, um chá ou até
+                        aquele brunch especial de domingo. Venha descobrir seu favorito!</p>
+                    @component('botoes.botaoConferir', ['color' => '#d8d8d8'])
+                        @slot('id')
+                            {{-- pode passar apenas um valor por vez --}}
+                            btnBakery
+                        @endslot
+                        @slot('background')
+                            linear-gradient(180deg, #FFBA00 30%, #FF7A00 70%)
+                        @endslot
+                        Confira a variedade!
+                    @endcomponent
+
+                </div>
+            </div>
+        </div>
+
+        <script src="{{ asset('js/gsap/gsap.min.js') }}"></script>
+
+        <script>
+            // Animação suave para mover a bolinha da esquerda para a direita
+            gsap.to("#bola", {
+                x: -400,
+                duration: 5,
+                ease: "power1.inOut",
+                repeat: -1,
+                yoyo: false
+            });
+        </script>
+
+        {{-- <script src=""></script> --}}
+    </body>
+@endsection

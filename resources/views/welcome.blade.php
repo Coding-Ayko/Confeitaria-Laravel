@@ -30,7 +30,7 @@
         <div class="novidades-semana-content">
             <h1>Novidades da Semana</h1>
             <div class="card-group">
-                @foreach ($recipes as $recipe)
+                {{-- @foreach ($recipes as $recipe)
                     <div class="card-col-md-3">
                         <div class="card">
                             <img src="{{ asset('./img/novidades-semana/' . $recipe->id . '.png') }}" alt="">
@@ -41,7 +41,7 @@
                             <img src="{{ asset('./img/rating.png') }}" alt="Rating" class="estrelas">
                         </div>
                     </div>
-                @endforeach
+                @endforeach --}}
             </div>
             <button id="btnNovidades">Fique por dentro das news!</button>
         </div>

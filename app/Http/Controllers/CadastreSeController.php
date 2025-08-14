@@ -35,7 +35,7 @@ class CadastreSeController extends Controller
         $user->senha = Hash::make($request->senha); // criptografia segura
         $user->save();
 
-        return redirect()->route('resources.views.layouts.main')
+        return redirect()->route('welcome')
             ->with('success', $user->nome . ' cadastrado com sucesso!');
     }
 }
