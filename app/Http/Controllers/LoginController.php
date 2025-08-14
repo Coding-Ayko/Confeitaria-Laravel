@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class testeController extends Controller
+class LoginController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,6 +13,8 @@ class testeController extends Controller
     {
         // puxar os dados 
         // retornar na view
+
+        return view('login');
     }
 
     /**
@@ -66,6 +68,6 @@ class testeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
     }
 }

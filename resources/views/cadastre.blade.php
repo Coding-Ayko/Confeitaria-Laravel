@@ -20,7 +20,6 @@
                 <input type="password" name='senha' placeholder="Senha" required>
                 <br>
                 <input type="submit" name='submit' value="Cadastrar"></button>
-                <a href="{{route('resources.views.layouts.main')}}">Voltar</a>
             </form>
         </div>
     </section>

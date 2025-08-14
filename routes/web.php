@@ -45,6 +45,10 @@ Route::get('/cadastre', [CadastreSeController::class, 'cadastreSe'])->name('cada
 Route::post('/cadastre', [CadastreSeController::class, 'store'])->name('cadastre.cadastreSe');
 Route::get('/cadastros/{id}', [CadastreSeController::class, 'showCadastro'])->name('cadastre.showCadastro');
 
+use App\Http\Controllers\LoginController;
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+
 
 
 // Rotas usando action - Login Controller
