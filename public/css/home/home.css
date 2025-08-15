@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  justify-content: center !important; 
+  justify-content: center !important;
   /* max-width:max-content; */
   height: 90vh;
   gap: 200px;
@@ -92,8 +92,8 @@ select:focus {
   border: none;
   border-radius: 6px;
   background: linear-gradient(181deg, rgba(190, 0, 77, 0.80) 39.17%, rgba(69, 0, 28, 0.70) 99.15%);
-  box-shadow: 0px 4px 4px #802D69, 
-              0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px #802D69,
+    0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #btnBusca {
@@ -200,7 +200,8 @@ select:focus {
   overflow: hidden;
 }
 
-.trigo-fundo { /* deixar essa parte em cima do content de novidades-semana */
+.trigo-fundo {
+  /* deixar essa parte em cima do content de novidades-semana */
   position: absolute;
   top: -190px;
   left: -50px;
@@ -220,7 +221,7 @@ select:focus {
 
 .header-brownie-text {
   position: relative;
-  z-index: 2; 
+  z-index: 2;
   max-width: 34%;
 }
 
@@ -232,7 +233,7 @@ select:focus {
   width: 80px;
 }
 
-.header-brownie-text h1{
+.header-brownie-text h1 {
   font-family: "Sansita Swashed", cursive;
   font-size: 55px;
   color: #7E3100;
@@ -249,7 +250,7 @@ select:focus {
 }
 
 .brownie-imgs img {
-  height: 580px;  
+  height: 580px;
 }
 
 #btnBrownieAvela {
@@ -257,8 +258,8 @@ select:focus {
   border: none;
   border-radius: 5px;
   background: linear-gradient(181deg, rgba(164, 64, 0, 0.85) 39.17%, rgba(113, 46, 3, 0.85) 99.15%);
-  box-shadow: 0px 4px 4px #712E03, 
-              0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px #712E03,
+    0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 5px 20px;
   /* font-weight: bold; */
   transition: background 0.3s ease;
@@ -285,14 +286,15 @@ select:focus {
   height: 100%;
   width: 100%;
   background-image: url('/img/bakery/background-dourado.png');
-  background-size: 500px 280px; /* tamanho do padrão hihi hihi  */
+  background-size: 500px 280px;
+  /* tamanho do padrão hihi hihi  */
   background-repeat: repeat;
   background-position: center;
   opacity: 0.6;
   z-index: 0;
 }
 
-.session-bakery > * {
+.session-bakery>* {
   position: relative;
   z-index: 1;
 }
@@ -311,21 +313,21 @@ img.pao {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  opacity:0.30 ;
+  opacity: 0.30;
 }
 
 
 .layout-bakery {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
-.layout-right-bakery{
+.layout-right-bakery {
   max-width: 30%;
   text-align: left;
 }
 
-.description-bakery{
+.description-bakery {
   font-size: 1.5rem;
   color: #865718;
 }
@@ -333,9 +335,3 @@ img.pao {
 #btnBakery {
   color: white
 }
-
-
-
-
-
-

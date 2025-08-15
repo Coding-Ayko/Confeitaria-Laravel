@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome', 100);
             $table->string('email', 100)->unique();
-            $table->string('senha', 20);
+            $table->string('senha', 60);
             $table->boolean('ativo')->default(true);
             $table->timestamps();
         });
