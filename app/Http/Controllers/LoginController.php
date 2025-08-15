@@ -50,12 +50,13 @@ class LoginController extends Controller
         // Verifica se usuário existe e senha confere
         if ($user && Hash::check($request->senha,$user->senha)) {
             // Salva dados do usuário na sessão
-            session(['user_id' => $user->id, 'user_name' => $user->name]);
+            session(['user_id' => $user->id, 'user_name' => $user->nome]);
 
             return redirect()->route('main2'); //ou para a página inicial após o login
+        } else {
+            $mensagem = 'E-mail ou senha inválidas!';
+        return back()->withErrors(['email' => $mensagem]);
         }
-
-        return back()->withErrors(['email' => 'email ou senha inválidos']);
     }
 
     /**

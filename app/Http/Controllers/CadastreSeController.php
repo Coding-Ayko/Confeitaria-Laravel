@@ -9,17 +9,32 @@ use Illuminate\Http\Request;
 
 class CadastreSeController extends Controller
 {
+
+    
+    
     public function cadastreSe()
     {
         return view('cadastre');
     }
-
+    
     public function showCadastro($id)
     {
         $user = CadastroUser::findOrFail($id);
         // dd($user);
         return view('cadastros', compact('user'));
     }
+    
+    // public function main2()
+    // {
+    //     // Protege rota para só logado acessar
+    //     if (!session('user_id')) {
+    //         return redirect()->route('login')->with('error', 'Você precisa estar logado.');
+    //     }
+
+    //     $users = CadastroUser::all();
+
+    //     return view('main2', compact('user'));
+    // }
 
     public function store(Request $request)
     {
@@ -29,13 +44,14 @@ class CadastreSeController extends Controller
             'senha' => 'required|min:6',
         ]);
 
+
         $user = new CadastroUser();
         $user->nome = $request->nome;
         $user->email = $request->email;
         $user->senha = Hash::make($request->senha); // criptografia segura
         $user->save();
 
-        return redirect()->route('welcome')
-            ->with('success', $user->nome . ' cadastrado com sucesso!');
+
+        return redirect()->route('welcome');
     }
 }

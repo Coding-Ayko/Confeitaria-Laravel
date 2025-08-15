@@ -3,13 +3,16 @@
 @section('content')
 
     <body>
-
-        @if (session('user_id'))
-            <span>Olá, {{ session('user_name') }}</span>
+        {{-- @if (session('user_id'))
+            <h1>Olá, {{ session('user_name') }}!</h1>
             <a href="{{ route('logout') }}">Sair</a>
         @endif
 
-
+        <ul>
+            @foreach ($users as $user)
+                <li>{{ $user->nome }} - {{ $user->email }}</li>
+            @endforeach
+        </ul> --}}
         <div class="home-content">
             <div class="header-home-text">
                 <img class="sparkle" src="\.\img\Sparkle.svg" alt="">
@@ -61,7 +64,8 @@
                 <h1>Receita<br> Brownie Avelã</h1>
                 <p>O Brownie é um doce comumente consumido, e combinado com nossa receita especial fica ainda mais
                     desejável! Brownie contém em sua massa, selecionados grãos de avelã e nozes, sortidos em um creme de
-                    chocolate belga, dando um sabor excepcional. As nozes por cima agregam tanto no visual, quando no sabor
+                    chocolate belga, dando um sabor excepcional. As nozes por cima agregam tanto no visual, quando no
+                    sabor
                     crocante ao saboreálo. </p>
 
             </div>
@@ -78,11 +82,14 @@
             <div class="layout-bakery">
                 <img class="pao" src="./img/bakery/paes-under-table.png" alt="">
                 <div class="layout-right-bakery">
-                    <p class="description-bakery"> <strong>Pães Artesanais Fresquinhos Toda Manhã</strong> <br>Nada como o
+                    <p class="description-bakery"> <strong>Pães Artesanais Fresquinhos Toda Manhã</strong> <br>Nada como
+                        o
                         aroma de pão quentinho saindo do forno para começar bem o dia! Todas as manhãs, nossa padaria
-                        prepara pães artesanais com ingredientes selecionados, fermentação natural e aquele cuidado especial
+                        prepara pães artesanais com ingredientes selecionados, fermentação natural e aquele cuidado
+                        especial
                         que dá gosto em cada mordida. Do clássico francês ao integral recheado, nossas fornadas trazem
-                        variedade, crocância por fora e maciez por dentro. Perfeitos para acompanhar um café, um chá ou até
+                        variedade, crocância por fora e maciez por dentro. Perfeitos para acompanhar um café, um chá ou
+                        até
                         aquele brunch especial de domingo. Venha descobrir seu favorito!</p>
                     @component('botoes.botaoConferir', ['color' => '#d8d8d8'])
                         @slot('id')

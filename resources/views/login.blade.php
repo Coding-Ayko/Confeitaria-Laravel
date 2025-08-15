@@ -14,6 +14,10 @@
                 <input type="email" name="email" placeholder="E-mail" required>
                 <input type="password" name="senha" placeholder="Senha" required>
                 <input type="submit" value="Acessar">
+                <br><br>
+                @error('email')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </form>
 
         </div>

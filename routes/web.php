@@ -52,6 +52,7 @@ Route::post('/login', [LoginController::class, 'store'])->name('login.store'); /
 Route::get('/main2', function() { return view('layouts.main2'); })->name('main2'); // página após login
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout'); // logout
 Route::get('/welcome', function () {return view('welcome');})->name('welcome');
+// Route::get('/main2', [CadastreSeController::class, 'main2'])->name('main2');
 
 
 

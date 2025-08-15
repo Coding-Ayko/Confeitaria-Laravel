@@ -4,7 +4,6 @@
 
     <body>
 
-
         <div class="home-content">
             <div class="header-home-text">
                 <img class="sparkle" src="\.\img\Sparkle.svg" alt="">
@@ -58,7 +57,7 @@
                     desejável! Brownie contém em sua massa, selecionados grãos de avelã e nozes, sortidos em um creme de
                     chocolate belga, dando um sabor excepcional. As nozes por cima agregam tanto no visual, quando no sabor
                     crocante ao saboreálo. </p>
-                
+
             </div>
 
             <div class="brownie-imgs">
@@ -79,16 +78,16 @@
                         que dá gosto em cada mordida. Do clássico francês ao integral recheado, nossas fornadas trazem
                         variedade, crocância por fora e maciez por dentro. Perfeitos para acompanhar um café, um chá ou até
                         aquele brunch especial de domingo. Venha descobrir seu favorito!</p>
-                        @component('botoes.botaoConferir', ['color' => '#d8d8d8'])
-                            
-                            @slot('id') {{--pode passar apenas um valor por vez--}}
-                                btnBakery
-                            @endslot
-                            @slot('background') 
-                                linear-gradient(180deg, #FFBA00 30%, #FF7A00 70%)
-                            @endslot
-                            Confira a variedade!
-                        @endcomponent
+                    @component('botoes.botaoConferir', ['color' => '#d8d8d8'])
+                        @slot('id')
+                            {{-- pode passar apenas um valor por vez --}}
+                            btnBakery
+                        @endslot
+                        @slot('background')
+                            linear-gradient(180deg, #FFBA00 30%, #FF7A00 70%)
+                        @endslot
+                        Confira a variedade!
+                    @endcomponent
 
                 </div>
             </div>

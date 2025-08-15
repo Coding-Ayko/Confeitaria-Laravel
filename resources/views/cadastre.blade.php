@@ -10,7 +10,7 @@
         <h1>CADASTRE-SE AQUI</h1>
         <p>Cadastre-se para receber nossas novidades e ofertas exclusivas!</p>
         <div class="cadastre-user">
-            <form action="{{route('cadastre')}}" class="cadastre-form" method="POST">
+            <form action="{{ route('cadastre') }}" class="cadastre-form" method="POST">
                 @csrf
                 {{-- serve para incluir automaticamente um token de segurança chamado CSRF token --}}
                 <input type="text" name='nome' placeholder="Nome Completo" required>
