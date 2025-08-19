@@ -1,3 +1,7 @@
+<head>
+    {{-- <link rel="stylesheet" href="{{asset("css/home/home.css")}}"> --}}
+</head>
+
 @extends('layouts.main')
 @section('title', 'Blog Aykandi')
 @section('content')
@@ -12,7 +16,13 @@
                 <form action=" {{ route('search.recipe') }}" method="get">
                     <div id="divBusca">
                         <input type="text" id="q" placeholder="Busque por uma receita!" />
-                        <button type="submit" id="btnBusca">Buscar</button>
+                        @component('botoes.botaoBuscar', [
+                            'id' => 'btnBakery',
+                            'color' => '#ffffff',
+                            'background' => 'linear-gradient(180deg,  #a21872 30%, #5a0060 70%)',
+                        ])
+                            Buscar
+                        @endcomponent
                     </div>
                 </form>
             </div>
@@ -42,7 +52,13 @@
                     </div>
                 @endforeach --}}
             </div>
-            <button id="btnNovidades">Fique por dentro das news!</button>
+            @component('botoes.botaoConferir', [
+                'id' => 'btnBakery',
+                'color' => '#ffffff',
+                'background' => 'linear-gradient(180deg,  #a21872 30%, #5a0060 70%)',
+            ])
+                Fique por dentro das news!
+            @endcomponent
         </div>
 
         <div class="sessao-brownie">
