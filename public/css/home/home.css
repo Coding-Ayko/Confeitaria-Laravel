@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  justify-content: center !important; 
+  justify-content: center !important;
   /* max-width:max-content; */
   height: 90vh;
   gap: 200px;
@@ -22,7 +22,7 @@
 .home-content h1 {
   color: #A20B48;
   font-family: "Sansita Swashed";
-  font-size: 80px;
+  font-size: 6rem;
   font-weight: 400;
   margin: 0;
   word-spacing: 6px;
@@ -33,7 +33,7 @@
   margin: 0;
   color: #7E053A;
   font-family: Miniver;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 26px;
 }
@@ -42,11 +42,19 @@
   max-width: 700px;
 }
 
-.sparkle {
+/* .sparkle {
   position: absolute;
-}
+} */
 
 /* ===================== INPUT & BOTÃO ===================== */
+input[type="text"] {
+  padding: 10px 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
 input#f,
 textarea:focus,
 input#f:focus,
@@ -59,9 +67,9 @@ select:focus {
 #divBusca {
   height: 30px;
   margin-top: 30px;
-  padding: 20px;
+  padding: 30px;
   display: flex;
-  gap: 5px;
+  gap: 10px;
   justify-content: space-between;
   align-items: center;
   border-radius: 6px;
@@ -92,13 +100,14 @@ select:focus {
   border: none;
   border-radius: 6px;
   background: linear-gradient(181deg, rgba(190, 0, 77, 0.80) 39.17%, rgba(69, 0, 28, 0.70) 99.15%);
-  box-shadow: 0px 4px 4px #802D69, 
-              0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px #802D69,
+    0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #btnBusca {
-  height: 32px;
-  width: 70px;
+  /* height: 32px;
+  width: 50px; */
+  text-align: center;
 }
 
 #btnNovidades {
@@ -128,20 +137,21 @@ select:focus {
   background-size: cover;
   width: 100%;
   padding: 60px;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 35px;
   position: relative;
   z-index: 1;
 }
 
 .novidades-semana-content h1 {
   font-family: "Sansita Swashed", cursive;
-  font-size: 36px;
+  font-size: 4rem;
   color: #7E3100;
   margin: 0;
+  margin-bottom: 0;
 }
 
 .card-group {
@@ -200,7 +210,8 @@ select:focus {
   overflow: hidden;
 }
 
-.trigo-fundo { /* deixar essa parte em cima do content de novidades-semana */
+.trigo-fundo {
+  /* deixar essa parte em cima do content de novidades-semana */
   position: absolute;
   top: -190px;
   left: -50px;
@@ -220,21 +231,24 @@ select:focus {
 
 .header-brownie-text {
   position: relative;
-  z-index: 2; 
+  z-index: 2;
+  font-size: 1.5rem;
   max-width: 34%;
 }
 
 .brilhinhos {
   position: absolute;
-  bottom: 232px;
-  left: 180px;
+  bottom: 340px;
+  left: 200px;
   z-index: 0;
-  width: 80px;
+  width: 60px;
+  opacity: 0.5; /* brilho inicial fraco */
+  cursor: pointer;
 }
 
-.header-brownie-text h1{
+.header-brownie-text h1 {
   font-family: "Sansita Swashed", cursive;
-  font-size: 55px;
+  font-size: 4.5rem;
   color: #7E3100;
   margin: 0;
 }
@@ -243,13 +257,13 @@ select:focus {
   margin: 0;
   color: #7E3100;
   font-family: Miniver;
-  font-size: 20px;
+  font-size: 1.7rem;
   font-weight: 400;
   line-height: 26px;
 }
 
 .brownie-imgs img {
-  height: 580px;  
+  height: 580px;
 }
 
 #btnBrownieAvela {
@@ -257,10 +271,9 @@ select:focus {
   border: none;
   border-radius: 5px;
   background: linear-gradient(181deg, rgba(164, 64, 0, 0.85) 39.17%, rgba(113, 46, 3, 0.85) 99.15%);
-  box-shadow: 0px 4px 4px #712E03, 
-              0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px #712E03,
+    0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 5px 20px;
-  /* font-weight: bold; */
   transition: background 0.3s ease;
 }
 
@@ -285,14 +298,15 @@ select:focus {
   height: 100%;
   width: 100%;
   background-image: url('/img/bakery/background-dourado.png');
-  background-size: 500px 280px; /* tamanho do padrão hihi hihi  */
+  background-size: 500px 280px;
+  /* tamanho do padrão hihi hihi  */
   background-repeat: repeat;
   background-position: center;
   opacity: 0.6;
   z-index: 0;
 }
 
-.session-bakery > * {
+.session-bakery>* {
   position: relative;
   z-index: 1;
 }
@@ -311,41 +325,25 @@ img.pao {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  opacity:0.30 ;
+  opacity: 0.30;
 }
 
 
 .layout-bakery {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
-.layout-right-bakery{
+.layout-right-bakery {
   max-width: 30%;
   text-align: left;
 }
 
-.description-bakery{
+.description-bakery {
+  font-size: 1.5rem;
   color: #865718;
 }
 
-
 #btnBakery {
-  color: aliceblue;
-  border: none;
-  border-radius: 5px;
-  background: linear-gradient(181deg, #EDBD5B 24%, #C47E20 99%);
-  box-shadow: 0px 4px 4px #712E03, 
-              0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 5px 20px;
-  transition: background 0.3s ease;
+  color: white
 }
-
-
-
-
-
-
-
-
-

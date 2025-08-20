@@ -1,0 +1,15 @@
+
+h1 {
+    margin: 20px;
+    margin-bottom: 5px;
+    color: rgb(187, 58, 155);
+}
+
+p {
+    font-size: 1.5rem;
+    color: rgb(252, 162, 229);
+}
+
+#map {
+    height: 490px;
+}

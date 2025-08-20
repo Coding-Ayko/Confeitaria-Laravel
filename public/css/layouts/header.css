@@ -1,14 +1,14 @@
 body {
   background-color: white;
-    margin: 0px;
+  margin: 0px;
 }
-  
-header a{
+
+header a {
   text-decoration: none !important;
   font-weight: 700;
 }
 
-.dropdown-content{
+.dropdown-content {
   margin-top: 4px;
   font-size: 22px;
 }
@@ -24,7 +24,7 @@ header a{
 }
 
 
-.dropdown-content li a{
+.dropdown-content li a {
   display: inline-block;
   text-align: center;
   padding: 14px 14px;
@@ -40,7 +40,7 @@ li.dropdown {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -49,22 +49,25 @@ li.dropdown {
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 
-.menu-nav li a{
+.menu-nav li a {
   display: block;
   height: 100%;
   position: relative;
   align-items: center;
   transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
   font-size: 24px;
-  text-decoration: none; 
+  text-decoration: none;
 }
+
 :root {
   --color: #fff;
 }
@@ -100,7 +103,7 @@ li.dropdown {
   transform: translateX(0);
 }
 
- .menu-nav > li > a:after {
+.menu-nav>li>a:after {
   content: "";
   position: absolute;
   width: 0%;
@@ -108,35 +111,37 @@ li.dropdown {
   display: block;
   transition: all 0.3s ease;
 }
-.menu-nav >li> a:hover::after {
+
+.menu-nav>li>a:hover::after {
   width: 100%;
   height: 2px;
   background-color: #802D69;
-} 
+}
 
-#login{
+
+#login {
   background-color: rgba(197, 19, 86, 0.60);
   border-radius: 16px;
 }
 
 
-#login a{
+#login a {
   color: white;
   text-decoration: none;
 }
 
-a.cta{
+a.cta {
   font-size: 20px;
 }
 
-ul{
+ul {
   margin: 0px;
   padding: 0px;
   list-style: none;
   font-size: 24px;
 }
 
-.div-header-img{
+.div-header-img {
   display: flex;
 }
 
@@ -154,19 +159,18 @@ header {
   border-bottom: 1px solid #BE9AB4;
 }
 
-
-ul{
+ul {
   display: flex;
   list-style: none;
   gap: 20px;
-} 
+}
 
-header a{
+header a {
   color: rgba(162, 11, 72, 0.92);
   font-family: 'Inter', sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }

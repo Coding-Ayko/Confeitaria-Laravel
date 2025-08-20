@@ -1,28 +1,27 @@
-<head>
-    {{-- <link rel="stylesheet" href="{{asset("css/home/home.css")}}"> --}}
-</head>
-
 @extends('layouts.main')
 @section('title', 'Blog Aykandi')
 @section('content')
 
     <body>
+        {{-- @if (session('user_id'))
+            <h1>Olá, {{ session('user_name') }}!</h1>
+            <a href="{{ route('logout') }}">Sair</a>
+        @endif
 
+        <ul>
+            @foreach ($users as $user)
+                <li>{{ $user->nome }} - {{ $user->email }}</li>
+            @endforeach
+        </ul> --}}
         <div class="home-content">
             <div class="header-home-text">
-                {{-- <img class="sparkle" src="\.\img\Sparkle.svg" alt=""> --}}
+                <img class="sparkle" src="\.\img\Sparkle.svg" alt="">
                 <p class="subtitulo-blog">Pratos Saudáveis e Deliciosos!</p>
                 <h1>Blog de Receitas <br> Gourmet</h1>
                 <form action=" {{ route('search.recipe') }}" method="get">
                     <div id="divBusca">
                         <input type="text" id="q" placeholder="Busque por uma receita!" />
-                        @component('botoes.botaoBuscar', [
-                            'id' => 'btnBakery',
-                            'color' => '#ffffff',
-                            'background' => 'linear-gradient(180deg,  #a21872 30%, #5a0060 70%)',
-                        ])
-                            Buscar
-                        @endcomponent
+                        <button type="submit" id="btnBusca">Buscar</button>
                     </div>
                 </form>
             </div>
@@ -52,13 +51,7 @@
                     </div>
                 @endforeach --}}
             </div>
-            @component('botoes.botaoConferir', [
-                'id' => 'btnBakery',
-                'color' => '#ffffff',
-                'background' => 'linear-gradient(180deg,  #a21872 30%, #5a0060 70%)',
-            ])
-                Fique por dentro das news!
-            @endcomponent
+            <button id="btnNovidades">Fique por dentro das news!</button>
         </div>
 
         <div class="sessao-brownie">
@@ -71,7 +64,8 @@
                 <h1>Receita<br> Brownie Avelã</h1>
                 <p>O Brownie é um doce comumente consumido, e combinado com nossa receita especial fica ainda mais
                     desejável! Brownie contém em sua massa, selecionados grãos de avelã e nozes, sortidos em um creme de
-                    chocolate belga, dando um sabor excepcional. As nozes por cima agregam tanto no visual, quando no sabor
+                    chocolate belga, dando um sabor excepcional. As nozes por cima agregam tanto no visual, quando no
+                    sabor
                     crocante ao saboreálo. </p>
 
             </div>
@@ -88,11 +82,14 @@
             <div class="layout-bakery">
                 <img class="pao" src="./img/bakery/paes-under-table.png" alt="">
                 <div class="layout-right-bakery">
-                    <p class="description-bakery"> <strong>Pães Artesanais Fresquinhos Toda Manhã</strong> <br>Nada como o
+                    <p class="description-bakery"> <strong>Pães Artesanais Fresquinhos Toda Manhã</strong> <br>Nada como
+                        o
                         aroma de pão quentinho saindo do forno para começar bem o dia! Todas as manhãs, nossa padaria
-                        prepara pães artesanais com ingredientes selecionados, fermentação natural e aquele cuidado especial
+                        prepara pães artesanais com ingredientes selecionados, fermentação natural e aquele cuidado
+                        especial
                         que dá gosto em cada mordida. Do clássico francês ao integral recheado, nossas fornadas trazem
-                        variedade, crocância por fora e maciez por dentro. Perfeitos para acompanhar um café, um chá ou até
+                        variedade, crocância por fora e maciez por dentro. Perfeitos para acompanhar um café, um chá ou
+                        até
                         aquele brunch especial de domingo. Venha descobrir seu favorito!</p>
                     @component('botoes.botaoConferir', ['color' => '#d8d8d8'])
                         @slot('id')
@@ -110,88 +107,18 @@
         </div>
 
         <script src="{{ asset('js/gsap/gsap.min.js') }}"></script>
-        <script src="{{ asset('js/gsap/ScrollTrigger.min.js') }}"></script>
 
         <script>
-            gsap.from(".header-home-text p", {
-                x: -40,
-                opacity: 0,
-                duration: 3,
-                ease: 'power4'
-            });
-
-            gsap.from(".header-home-text h1", {
-                y: 40,
-                opacity: 0,
-                duration: 1.5,
-                ease: 'power1.out'
-            }, "-=1");
-
-            gsap.from("#divBusca", {
-                y: 40,
-                opacity: 0,
-                duration: 1,
-                ease: 'power1.out'
-            }, "-=1");
-
             // Animação suave para mover a bolinha da esquerda para a direita
             gsap.to("#bola", {
-                x: 100,
-                duration: 2,
-                ease: "sine.inOut", // deixa contínuo e suave
-                repeat: -1,
-                yoyo: true
-            });
-            gsap.registerPlugin(ScrollTrigger); // quando rolar a página, aparecer o h1
-            gsap.from('.novidades-semana-content h1', {
-                opacity: 0,
-                // scale: 0.95, -> começa um pouco menor
-                duration: 1.5,
-                delay: 4,
+                x: -400,
+                duration: 5,
                 ease: "power1.inOut",
-                // não precisou, acredito que seja melhor usar o scroll junto com uma função js, ou com a ajuda do css.
-                // scrollTrigger: {
-                //     trigger: ".novidade-semana-content h1", //elemento que dispara a animação
-                //     start: "top 80%", //quando o topo do h1 chegar a 80% da tela 
-                //     toggleActions: "play none none reverse" //para quando entrar, reverse quando sair
-                // }
-            });
-
-            // gsap.to(".brilhinhos", {
-            //     opacity: 1, // fica visível
-            //     duration: 0.8, // tempo do “acender”
-            //     repeat: -1, // loop infinito
-            //     yoyo: true, // volta para o estado inicial (apagado)
-            //     ease: "sine.inOut" // suaviza o fade
-            // });
-        </script>
-
-        <script>
-            // Importante: gsap já carregado antes
-            const brilho = document.querySelector(".brilhinhos");
-            // animação inicial fraca (opcional)
-            gsap.set(brilho, {
-                scale: 1,
-                opacity: 0.8
-            });
-            // efeito hover
-            brilho.addEventListener("mouseenter", () => {
-                gsap.to(brilho, {
-                    scale: 1.2,
-                    opacity: 1.5,
-                    duration: 0.3,
-                    ease: "power1.out"
-                });
-            });
-
-            brilho.addEventListener("mouseleave", () => {
-                gsap.to(brilho, {
-                    scale: 1,
-                    opacity: 0.8,
-                    duration: 0.3,
-                    ease: "power1.in"
-                });
+                repeat: -1,
+                yoyo: false
             });
         </script>
+
+        {{-- <script src=""></script> --}}
     </body>
 @endsection

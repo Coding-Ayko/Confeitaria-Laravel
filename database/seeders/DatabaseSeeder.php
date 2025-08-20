@@ -12,6 +12,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // if(!User::where('email', 'cesar@celke.com.br')->first()) {
+        //     User::create([
+
+        //     ]);
+        // }
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
