@@ -22,7 +22,7 @@
 .home-content h1 {
   color: #A20B48;
   font-family: "Sansita Swashed";
-  font-size: 80px;
+  font-size: 6rem;
   font-weight: 400;
   margin: 0;
   word-spacing: 6px;
@@ -33,7 +33,7 @@
   margin: 0;
   color: #7E053A;
   font-family: Miniver;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 26px;
 }
@@ -42,11 +42,19 @@
   max-width: 700px;
 }
 
-.sparkle {
+/* .sparkle {
   position: absolute;
-}
+} */
 
 /* ===================== INPUT & BOTÃO ===================== */
+input[type="text"] {
+  padding: 10px 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
 input#f,
 textarea:focus,
 input#f:focus,
@@ -59,9 +67,9 @@ select:focus {
 #divBusca {
   height: 30px;
   margin-top: 30px;
-  padding: 20px;
+  padding: 30px;
   display: flex;
-  gap: 5px;
+  gap: 10px;
   justify-content: space-between;
   align-items: center;
   border-radius: 6px;
@@ -234,6 +242,8 @@ select:focus {
   left: 200px;
   z-index: 0;
   width: 60px;
+  opacity: 0.5; /* brilho inicial fraco */
+  cursor: pointer;
 }
 
 .header-brownie-text h1 {

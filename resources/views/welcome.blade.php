@@ -10,7 +10,7 @@
 
         <div class="home-content">
             <div class="header-home-text">
-                <img class="sparkle" src="\.\img\Sparkle.svg" alt="">
+                {{-- <img class="sparkle" src="\.\img\Sparkle.svg" alt=""> --}}
                 <p class="subtitulo-blog">Pratos Saudáveis e Deliciosos!</p>
                 <h1>Blog de Receitas <br> Gourmet</h1>
                 <form action=" {{ route('search.recipe') }}" method="get">
@@ -110,18 +110,88 @@
         </div>
 
         <script src="{{ asset('js/gsap/gsap.min.js') }}"></script>
+        <script src="{{ asset('js/gsap/ScrollTrigger.min.js') }}"></script>
 
         <script>
+            gsap.from(".header-home-text p", {
+                x: -40,
+                opacity: 0,
+                duration: 3,
+                ease: 'power4'
+            });
+
+            gsap.from(".header-home-text h1", {
+                y: 40,
+                opacity: 0,
+                duration: 1.5,
+                ease: 'power1.out'
+            }, "-=1");
+
+            gsap.from("#divBusca", {
+                y: 40,
+                opacity: 0,
+                duration: 1,
+                ease: 'power1.out'
+            }, "-=1");
+
             // Animação suave para mover a bolinha da esquerda para a direita
             gsap.to("#bola", {
-                x: -400,
-                duration: 5,
-                ease: "power1.inOut",
+                x: 100,
+                duration: 2,
+                ease: "sine.inOut", // deixa contínuo e suave
                 repeat: -1,
-                yoyo: false
+                yoyo: true
             });
+            gsap.registerPlugin(ScrollTrigger); // quando rolar a página, aparecer o h1
+            gsap.from('.novidades-semana-content h1', {
+                opacity: 0,
+                // scale: 0.95, -> começa um pouco menor
+                duration: 1.5,
+                delay: 4,
+                ease: "power1.inOut",
+                // não precisou, acredito que seja melhor usar o scroll junto com uma função js, ou com a ajuda do css.
+                // scrollTrigger: {
+                //     trigger: ".novidade-semana-content h1", //elemento que dispara a animação
+                //     start: "top 80%", //quando o topo do h1 chegar a 80% da tela 
+                //     toggleActions: "play none none reverse" //para quando entrar, reverse quando sair
+                // }
+            });
+
+            // gsap.to(".brilhinhos", {
+            //     opacity: 1, // fica visível
+            //     duration: 0.8, // tempo do “acender”
+            //     repeat: -1, // loop infinito
+            //     yoyo: true, // volta para o estado inicial (apagado)
+            //     ease: "sine.inOut" // suaviza o fade
+            // });
         </script>
 
-        {{-- <script src=""></script> --}}
+        <script>
+            // Importante: gsap já carregado antes
+            const brilho = document.querySelector(".brilhinhos");
+            // animação inicial fraca (opcional)
+            gsap.set(brilho, {
+                scale: 1,
+                opacity: 0.8
+            });
+            // efeito hover
+            brilho.addEventListener("mouseenter", () => {
+                gsap.to(brilho, {
+                    scale: 1.2,
+                    opacity: 1.5,
+                    duration: 0.3,
+                    ease: "power1.out"
+                });
+            });
+
+            brilho.addEventListener("mouseleave", () => {
+                gsap.to(brilho, {
+                    scale: 1,
+                    opacity: 0.8,
+                    duration: 0.3,
+                    ease: "power1.in"
+                });
+            });
+        </script>
     </body>
 @endsection

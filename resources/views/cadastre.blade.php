@@ -67,6 +67,8 @@
                 duration: 0.8,
                 delay: 0.5
             });
+
+            
         });
     </script>
 @endsection {{-- Precisa fechar a section para que ele funcione corretamente --}}
